@@ -8,6 +8,7 @@ import ArrayToHtml from './global-components/ArrayToHtml';
 import appData from './json/appData.json';
 import ArrayToAHref from './global-components/ArrayToAHref';
 import ArrayToHtmlParent from './global-components/ArrayToHtmlParent';
+import CardCols from './CardCols';
 
 
 class TestCol extends React.Component {
@@ -21,6 +22,12 @@ class TestCol extends React.Component {
   }
 }
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      menuData: null
+    }
+  }
 
 
 
@@ -40,6 +47,20 @@ class App extends React.Component {
 
     this.setState({ 'menuData': menuData })
   }
+  makeTopCols() { 
+    // should be a generic component
+    const menuData = this.state.menuData ? this.state.menuData : null;
+    return appData.content.top_cols.map((item, idx) => {
+      return (
+        <div className='col-lg-4'>
+
+          <BSCard title={item.title}>
+          </BSCard>
+        </div>
+
+      );
+    })
+  }
 
   componentDidMount() {
     // if there is a saved menu, add it to state, else fetch new
@@ -50,6 +71,8 @@ class App extends React.Component {
 
   render() {
 
+    
+
     let nav_collapse = 'burger1';
     return (
       <div className="App container">
@@ -59,14 +82,12 @@ class App extends React.Component {
       </p>
         <div className='row'>
 
-          <div className='col-lg-4'>
+          <CardCols menuData={this.state.menuData} cols={appData.content.top_cols} />
+          
 
-            <BSCard title='SampleTitle'>
-              <p className='card-text'>yoooo</p>
-            </BSCard>
-          </div>
-          {/* <ArrayToHtml tag='a' atts={navbar_att_obj} array={nav_array_title} /> */}
-
+        </div>
+        <div className='row'>
+          <CardCols menuData={this.state.menuData} cols={appData.content.bot_cols} />
         </div>
       </div>
     );

@@ -1,16 +1,16 @@
 import React from 'react';
 
 class ArrayToHtmlParent extends React.Component {
-    // props: tag(str), atts(arr of obj), array(array)
+    // props: tag(str), atts(arr of obj),
     
     render() {
-        console.log(`arrayToHtmlParent: ${this.props.children}`);
+        console.log(`arraytoHTML: ${this.props.array}`);
         const TagName = this.props.tag;
         console.log({TagName});
-        const mappedArr = this.props.children.map((item, idx) => {
+        const mappedArr = this.props.atts.map((item, idx) => {
             return (
                 <TagName key={idx} {...this.props.atts[idx]}>
-                    {item}
+                    {this.props.children[idx]}
                 </TagName>
             );
         });

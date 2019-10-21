@@ -13,6 +13,25 @@
                 "title": "dolor",
                 "target": "http://abramgornik.com"
             }
+        ],
+        "top_cols": [
+            {
+                "title": "Appetizers"
+            },
+            {
+                "title": "Specials"
+            },
+            {
+                "title": "Entrees"
+            }
+        ],
+        "bot_cols": [
+            {
+                "title": "Drinks"
+            },
+            {
+                "title": "Desserts"
+            }
         ]
     }
 }
