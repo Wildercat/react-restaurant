@@ -12,7 +12,7 @@ class CardCols extends React.Component {
             this.props.cols.map((item, idx) => {
                 let mappedFood = menuData[idx].menu_items.map((innerItem, innerIdx) => {
                     return {
-                        title: innerItem.description,
+                        title: `${innerItem.description} $${innerItem.price}`,
                         atts:{
                             className: 'list-group-item'
                         }

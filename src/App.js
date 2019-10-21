@@ -41,25 +41,17 @@ class App extends React.Component {
       } catch (err) {
         console.log(err);
       }
+      response.data.menu_items = response.data.menu_items.map(item => {
+        // random number in range 10-50
+        item.price = Math.ceil(40 * Math.random() + 10);
+        return item;
+      })
       menuData.push(response.data);
     }
+
     localStorage.setItem('menuData', JSON.stringify(menuData));
 
     this.setState({ 'menuData': menuData })
-  }
-  makeTopCols() { 
-    // should be a generic component
-    const menuData = this.state.menuData ? this.state.menuData : null;
-    return appData.content.top_cols.map((item, idx) => {
-      return (
-        <div className='col-lg-4'>
-
-          <BSCard title={item.title}>
-          </BSCard>
-        </div>
-
-      );
-    })
   }
 
   componentDidMount() {
