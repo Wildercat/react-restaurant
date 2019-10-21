@@ -9,6 +9,7 @@ import appData from './json/appData.json';
 import ArrayToAHref from './global-components/ArrayToAHref';
 import ArrayToHtmlParent from './global-components/ArrayToHtmlParent';
 import CardCols from './CardCols';
+import Splash from './Splash';
 
 
 class TestCol extends React.Component {
@@ -62,23 +63,34 @@ class App extends React.Component {
   }
 
   render() {
-
-    
-
     let nav_collapse = 'burger1';
     return (
       <div className="App container">
-        <BSNav navId={nav_collapse} navbar_items={appData.content.navbar_items} />
-        <p className="display-3">
-          asdfasdf
-      </p>
+        
+        <Splash className='row p-3' imgURL={appData.content.splash_image}>
+          <div className='col'>
+            <BSNav navId={nav_collapse} navbar_items={appData.content.navbar_items} />
+            <div className='row justify-content-left'>
+                <h1 className='display-1 text-light'>{appData.content.name}</h1>
+            </div>
+            <div className='row'>
+              <h3 className='text-light font-weight-light'>{appData.content.address}</h3>
+            </div>
+            <div className='row'>
+              <h5 className='text-light font-weight-lighter'>{appData.content.hours}</h5>
+            </div>
+          </div>
+          
+        </Splash>
         <div className='row p-3'>
+          <a name='menu1'></a>
 
           <CardCols menuData={this.state.menuData} cols={appData.content.top_cols} />
-          
+
 
         </div>
         <div className='row p-3'>
+        <a name='menu2'></a>
           <CardCols menuData={this.state.menuData} cols={appData.content.bot_cols} />
         </div>
       </div>

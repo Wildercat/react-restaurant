@@ -36,7 +36,7 @@ class BSNav extends React.Component {
     render() {
         
         return (
-            <nav className='navbar navbar-expand-lg navbar-light'>
+            <nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
                 <BSNavToggle targetId={this.props.navId} />
                 <div className='collapse navbar-collapse' id={this.props.navId}>
                     <BSNavList navbar_items={this.props.navbar_items} />

@@ -2,18 +2,22 @@
     "content": {
         "navbar_items": [
             {
-                "title": "lorem",
-                "target": "http://example.com"
+                "title": "Eats",
+                "target": "#menu1"
             },
             {
-                "title": "ipsum",
-                "target": "https://google.com"
+                "title": "Treats",
+                "target": "#menu2"
             },
             {
                 "title": "dolor",
                 "target": "http://abramgornik.com"
             }
         ],
+        "splash_image": "splash-image.jpeg",
+        "name": "Fud.",
+        "address": "4949 Tyler Foote Road",
+        "hours": "3pm-10pm Mon-Sat",
         "top_cols": [
             {
                 "title": "Appetizers"

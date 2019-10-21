@@ -21,8 +21,9 @@ class CardCols extends React.Component {
                 })
                 
                 return (
-                    <div key={idx} className={`col-lg-${Math.floor(12 / this.props.cols.length)}`}>
-
+                    
+                    <div key={idx} className='col-lg'>
+                        
                         <BSCardAccord title={item.title}>
                             <ul className='list-group list-group-flush'>
                                 <ArraytoHtml tag='li' content={mappedFood}>
