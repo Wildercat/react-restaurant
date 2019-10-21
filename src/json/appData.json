@@ -1,0 +1,18 @@
+{
+    "content": {
+        "navbar_items": [
+            {
+                "title": "lorem",
+                "target": "http://example.com"
+            },
+            {
+                "title": "ipsum",
+                "target": "https://google.com"
+            },
+            {
+                "title": "dolor",
+                "target": "http://abramgornik.com"
+            }
+        ]
+    }
+}
