@@ -72,13 +72,13 @@ class App extends React.Component {
         <p className="display-3">
           asdfasdf
       </p>
-        <div className='row'>
+        <div className='row p-3'>
 
           <CardCols menuData={this.state.menuData} cols={appData.content.top_cols} />
           
 
         </div>
-        <div className='row'>
+        <div className='row p-3'>
           <CardCols menuData={this.state.menuData} cols={appData.content.bot_cols} />
         </div>
       </div>

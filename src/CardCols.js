@@ -1,5 +1,6 @@
 import React from 'react';
 import BSCard from './global-components/BSCard'
+import BSCardAccord from './global-components/BSCardAccord'
 import ArraytoHtml from './global-components/ArrayToHtml'
 
 
@@ -20,15 +21,15 @@ class CardCols extends React.Component {
                 })
                 
                 return (
-                    <div className={`col-lg-${Math.floor(12 / this.props.cols.length)}`}>
+                    <div key={idx} className={`col-lg-${Math.floor(12 / this.props.cols.length)}`}>
 
-                        <BSCard title={item.title}>
+                        <BSCardAccord title={item.title}>
                             <ul className='list-group list-group-flush'>
                                 <ArraytoHtml tag='li' content={mappedFood}>
 
                                 </ArraytoHtml>
                             </ul>
-                        </BSCard>
+                        </BSCardAccord>
                     </div>
 
                 );
