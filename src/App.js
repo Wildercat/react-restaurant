@@ -38,7 +38,7 @@ class App extends React.Component {
 
       let response;
       try {
-        response = await axios.get('http://entree-f18.herokuapp.com/v1/menu');
+        response = await axios.get('https://entree-f18.herokuapp.com/v1/menu');
       } catch (err) {
         console.log(err);
       }
