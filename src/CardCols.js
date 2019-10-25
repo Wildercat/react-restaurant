@@ -1,5 +1,4 @@
 import React from 'react';
-import BSCard from './global-components/BSCard'
 import BSCardAccord from './global-components/BSCardAccord'
 import ArraytoHtml from './global-components/ArrayToHtml'
 
@@ -13,7 +12,7 @@ class CardCols extends React.Component {
             this.props.cols.map((item, idx) => {
                 let mappedFood = menuData[idx].menu_items.map((innerItem, innerIdx) => {
                     return {
-                        title: `${innerItem.description} $${innerItem.price}`,
+                        title: <span>{innerItem.description} <i><b>${innerItem.price}</b></i></span>,
                         atts:{
                             className: 'list-group-item'
                         }

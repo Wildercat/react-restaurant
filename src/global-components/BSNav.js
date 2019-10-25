@@ -1,10 +1,9 @@
 import React from 'react';
-import ArrayToHtml from './ArrayToHtml';
 
 class BSNavToggle extends React.Component {
     render() {
         return (
-            <button className='navbar-toggler' type='button' data-toggle='collapse' data-target={this.props.targetId}>
+            <button className='navbar-toggler' type='button' data-toggle='collapse' data-target={`#${this.props.targetId}`}>
                 <span className='navbar-toggler-icon'></span>
             </button>
         );

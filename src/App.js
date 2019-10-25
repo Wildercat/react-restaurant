@@ -1,27 +1,14 @@
 import React from 'react';
 import axios from 'axios';
 
-import BSCard from './global-components/BSCard'
 import './App.css';
 import BSNav from './global-components/BSNav';
-import ArrayToHtml from './global-components/ArrayToHtml';
 import appData from './json/appData.json';
-import ArrayToAHref from './global-components/ArrayToAHref';
-import ArrayToHtmlParent from './global-components/ArrayToHtmlParent';
 import CardCols from './CardCols';
 import Splash from './Splash';
 
 
-class TestCol extends React.Component {
-  render() {
-    console.log(this);
-    return (
-      <div className='col-3'>
-        {this.props.children}
-      </div>
-    );
-  }
-}
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -38,7 +25,7 @@ class App extends React.Component {
 
       let response;
       try {
-        response = await axios.get('https://entree-f18.herokuapp.com/v1/menu');
+        response = await axios.get('https://entree-f18.herokuapp.com/v1/menu/12');
       } catch (err) {
         console.log(err);
       }
